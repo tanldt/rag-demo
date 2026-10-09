@@ -1,0 +1,20 @@
+Chunking is the process of splitting source documents into small, overlapping
+pieces before embedding them. Good chunks are large enough to preserve meaning
+but small enough for retrieval to find the most relevant evidence.
+
+Embeddings convert text into numeric vectors. Similar ideas should have vectors
+that are close together, so a RAG system can compare a question vector with
+document chunk vectors.
+
+Retrieval finds the top matching chunks for a question, usually with cosine
+similarity or a vector database. Generation then gives those chunks to a
+language model and asks it to answer using only that context.
+
+IVF and HNSW are approximate nearest neighbor indexing methods. IVF groups
+vectors into clusters and searches only selected clusters. HNSW builds a graph
+that lets search move quickly from broad neighborhoods to nearby vectors.
+
+RAG evaluation should check retrieval quality and answer quality. Useful checks
+include whether the right chunks were retrieved, whether citations support the
+answer, whether the answer avoids unsupported claims, and whether latency is
+acceptable.

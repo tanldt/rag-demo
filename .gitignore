@@ -1,0 +1,11 @@
+.venv/
+.cache/
+__pycache__/
+*.py[cod]
+*$py.class
+
+.env
+.env.*
+
+# Local source documents that are not part of the demo.
+docs/Event Data and Analysis/
